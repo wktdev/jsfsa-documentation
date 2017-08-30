@@ -1,0 +1,112 @@
+
+.navbar-inverse .navbar-nav>li>a{
+	font-size:1.5em;
+	color:rgba(0, 231, 255, 0.81);
+}
+
+
+.navbar-inverse {
+    background-color: rgb(29, 30, 61);
+    border-color: #FF0000;
+}
+
+.navbar-brand{
+  display:none;
+}
+
+
+
+
+p{
+	font-size:1.2em;
+	color: color:#f2b632;;
+}
+
+.what-you-will-learn > li{
+  font-size:1.2em;
+    color:#f2b632;
+
+}
+
+
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 10px 16px;
+    font-size: 25px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    margin-bottom:1em;
+}
+
+
+
+body::after {
+
+  content: "";
+	background:url("../images/neve.jpg") no-repeat center center fixed; 
+  opacity: 0.1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+  height:1200px;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+}
+
+
+
+.img-responsive {
+	height:35em;
+	    margin: 0 auto;
+}
+
+.a-great-deal{
+	
+}
+
+.deal-box{
+	
+	text-align:center;
+}
+
+#how-does-it-work{
+  font-size:2.5em;
+}
+
+.btn-default {
+    display: none;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.numberCircle {
+    border-radius: 50%;
+
+
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font: 20px Arial, sans-serif;
+    margin-right:10px;
+}
+
+.stripe-button-el  span{
+  font-size:25px;
+
+  
+}
+

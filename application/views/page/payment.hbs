@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>head}}
+  <body>
+    <body>
+      <div class="container">
+        {{>navigation}}
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="well text-center">
+              <h2 class="title-block">Thanks for registering</h2>
+              <h2 class="title-block">One more step and you're all set!</h2>
+            </div>
+          </div>
+          <div class="deal-box">
+            <form action="payment" method="POST">
+        <input type="hidden" name="_csrf" value = {{csrfToken}}>
+              
+              <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_test_2vzqy4IW9zHAYyKSjDNZkd2l"
+              data-amount="14900"
+              data-name="Demo Site"
+              data-description="Subscription $149"
+              data-image="images/stripe_image.png"
+              data-locale="auto">
+              </script>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+      <script src="js/jquery.js"></script>
+      <!-- Bootstrap Core JavaScript -->
+      <script src="js/bootstrap.min.js"></script>
+    </body>
+  </body>
+  
+</html>

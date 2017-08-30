@@ -1,0 +1,219 @@
+@font-face {
+    font-family: terminus;
+    src: url(../fonts/terminus/TerminusTTF-4.39.ttf);
+}
+
+
+body{
+	background-color:#252839;
+
+}
+
+.navbar-inverse .navbar-nav>li>a{
+	font-size:1.5em;
+	color:rgba(0, 231, 255, 0.81);
+}
+
+
+.navbar-inverse {
+    background-color: rgb(29, 30, 61);
+    border-color: #FF0000;
+}
+
+.navbar-brand{
+  display:none;
+}
+
+.register-button{
+  margin-bottom:14px;
+      color: white;
+      background-color: #6DCA19;
+    border-style: solid;
+      font-size:2em;
+}
+
+#waveform-image{
+
+  position:absolute;
+  opacity:0.6;
+  width:100%;
+  left:0px;
+
+
+}
+
+h1,h2,h3,h4,h5, h6{
+    color: #f2b632;
+}
+
+h1{
+  font-size:3.5em;
+}
+
+.register-button{
+  margin-bottom:14px;
+}
+
+
+
+p{
+	font-size:1.7em;
+	color:rgb(253, 248, 238);
+}
+
+
+
+.btn-group-lg>.btn, .btn-lg {
+    padding: 10px 16px;
+    font-size: 25px;
+    line-height: 1.3333333;
+    border-radius: 6px;
+    margin-bottom:1em;
+}
+
+code{
+  background-color:transparent;
+  display:block;
+  color:rgba(134, 144, 136, 0.14);
+  font-size:2em;
+
+
+}
+
+.code{
+  position:absolute;
+  top:300px;
+  margin:0 auto;
+  width:1000px;
+
+}
+
+body::after {
+
+  content: "";
+	background:url("../images/neve.jpg") no-repeat center center fixed; 
+  opacity: 0.02;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; 
+  height:1200px;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+
+}
+
+.well {
+	background-color:transparent;
+  border-style:none;
+
+}
+
+#founder-image{
+  height:350px;
+
+}
+
+
+#borg-image{
+  height:350px;
+ 
+}
+
+
+.img-responsive {
+	height:35em;
+	margin: 0 auto;
+}
+
+.a-great-deal{
+	
+}
+
+.deal-box{
+	
+	text-align:center;
+}
+
+.title-block{
+  font-size:2.5em;
+}
+
+.btn-default {
+    display: none;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+
+.numberCircle {
+    border-radius: 50%;
+
+
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+    font: 20px Arial, sans-serif;
+    margin-right:10px;
+}
+
+.stripe-button-el  span{
+  font-size:25px;
+
+  
+}
+
+.about-container{
+
+
+
+}
+
+.contact-links > li{
+  font-size:1.7em;
+  color:rgba(0, 255, 114, 0.6);
+
+}
+
+.contact-email{
+  margin:0 auto;
+  width:400px;
+ text-align:center;
+}
+
+.dashboard-lesson{
+     background-color: rgba(108, 126, 218, 0.39);
+     border-radius:5px;
+     padding:10px;
+     margin:10px;
+}
+
+.dashboard-lesson p{
+      font-size: 1.7em;
+
+}
+
+
+
+#dashboard-pane{
+
+}
+
+.name{
+  font-family: terminus;
+  color:#3BC93C;
+  font-size:1.5em;
+ 
+
+}

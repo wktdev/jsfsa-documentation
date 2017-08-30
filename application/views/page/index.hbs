@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{{>head}}
+</head>
+    <body>
+        {{>navigation}}
+        <!-- Page Content -->
+        <div class="container">
+            <!-- Heading Row -->
+             <img id="waveform-image"src="images/waveform.png" alt="">
+             <div class="code">
+                 
+
+        <code>
+
+
+                var audioContext = new AudioContext();<br>
+
+                var oscillator1 = audioContext.createOscillator();<br>
+                var stereoPanner1 = audioContext.createStereoPanner();<br>
+                stereoPanner1.pan.value = -0.5;<br>
+                oscillator1.connect(stereoPanner);<br>
+                stereoPanner1.connect(audioContext.destination);<br>
+                oscillator1.start(audioContext.currentTime);<br>
+                var oscillator2 = audioContext.createOscillator();<br>
+
+
+
+
+
+          </code>
+
+    
+          
+             </div>
+
+            <div class="row">
+                    
+                <div class="col-md-6">
+                    <h1 class="opening-statement">Learn JavaScript the <i>sound</i> way with a mentor</h1>
+
+                    <p>If you're a musician, DJ, sound performance artist or audio engineer and want to learn the art of programming then you have come to the right place. Here you will learn to code using the worlds most popular programming language while building interactive audio apps with the help of a mentor </p>
+                    <br>
+
+                    <div class="deal-box">
+
+                        <h3 class="a-great-deal">Only $149 a month!</h3>
+                        <br>
+                       <!--  <p>Upon payment a mentor will contact you by email to schedule your first meeting</p>
+                       <form action="/" method="POST">
+                           <script
+                           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                           data-key="pk_test_2vzqy4IW9zHAYyKSjDNZkd2l"
+                           data-amount="14900"
+                           data-name="Demo Site"
+                           data-description="Subscription $149"
+                           data-image="images/stripe_image.png"
+                           data-locale="auto">
+                           </script>
+                       </form>
+                       <br> -->
+                        <form action="/register" method="GET">
+                         <input class="btn register-button" type="submit" value = "Enroll in course">
+                       </form>
+                    </div>
+                </div>
+                <!-- /.col-md-4 -->
+                <div class="col-md-6">
+                    <img class="img-responsive img-rounded" src="images/book_cover.png" alt="">
+                </div>
+                <!-- /.col-md-8 -->
+            </div>
+            <!-- /.row -->
+            <hr>
+            <!-- Call to Action Well -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="well text-center">
+                        <h2 class="title-block">How it works</h2>
+                    </div>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <!-- Content Row -->
+            <div class="row">
+            
+                <!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <h2><span class="numberCircle">1</span>Sign up</h2>
+                    <p>Sign up for the course and get access to our world class curriculum</p>
+                    <a class="btn btn-default" href="#">More Info</a>
+                </div>
+                    <div class="col-md-4">
+                    <h2><span class="numberCircle">2</span>Receive your book</h2>
+                    <p>Receive the premier resource to learn JavaScript from a sound artist perspective</p>
+                    <a class="btn btn-default" href="#">More Info</a>
+                </div>
+                <!-- /.col-md-4 -->
+                <div class="col-md-4">
+                    <h2><span class="numberCircle">3</span>Meet your mentor</h2>
+                    <p>Meet your mentor online for one hour each week and build the projects that inspire you</p>
+                    <a class="btn btn-default" href="#">More Info</a>
+                </div>
+                <!-- /.col-md-4 -->
+            </div>
+            <!-- /.row -->
+            <!-- Footer -->
+            <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- <p>Copyright &copy; JavaScript for Sound Artists 2015-2016</p> -->
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- /.container -->
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+    <link href="css/app.css" rel="stylesheet">
+</html>

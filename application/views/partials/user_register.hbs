@@ -1,0 +1,45 @@
+
+
+	     <div class="row">
+            <div class="col-lg-12">
+                <div class="well text-center">
+                    <h2 id="how-does-it-work">Register</h2>
+                </div>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+
+
+<form class="register" action="/register" method="post">
+
+
+
+	<span>First Name</span>
+		<input type="hidden" name="_csrf" value = {{csrfToken}}>
+		<input class="form-control register" type="text" name="firstName">
+
+		<br>
+
+		<span>Last Name</span>
+
+		<input class="form-control register" type="text" name="lastName">
+
+		<br>
+
+		<span>Email</span>
+
+		<input class="form-control register" type="text" name="email">
+
+		<br>
+
+		<span>Enter a Password</span>
+
+		<input class="form-control register" type="password" name="password">
+
+		<br>
+
+		<input class="btn" type="submit">
+
+	
+
+</form>
