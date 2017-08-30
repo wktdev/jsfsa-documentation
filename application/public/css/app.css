@@ -217,3 +217,48 @@ body::after {
  
 
 }
+
+#lesson-content{
+  padding:30px;
+  background-color:white;
+  font-size:9px;
+  word-spacing:3px;
+border-radius:5px;
+
+}
+
+#lesson-content p{
+   margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+
+#lesson-content h1 {
+    margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+
+#lesson-content h2 {
+    margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+
+#lesson-content h3 {
+    margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+
+#lesson-content h4 {
+    margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+
+#lesson-content h5 {
+    margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+
+#lesson-content h6 {
+    margin:30px;
+  color:rgba(0, 0, 0, 0.78);
+}
+

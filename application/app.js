@@ -404,7 +404,7 @@ app.get("/dashboard", function(req, res) {
 //____________________________________________________________________________________________
 
 
-app.get("/dashboard/lesson/:id", function(req, res) {
+app.get("/dashboard/jsfsa/:id", function(req, res) {
 
     // Add dashboard for mentors 
 
@@ -419,7 +419,7 @@ app.get("/dashboard/lesson/:id", function(req, res) {
             console.log(user.subscribed);
 
             if (user.subscribed === true) {
-                res.render(req.params.id, {
+                res.render("modules/jsfsa/lesson-" + req.params.id + "/lesson", {
                     firstName: user.firstName,
                     lastName: user.lastName
                 })

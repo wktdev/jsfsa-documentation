@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>head}}
+  <body>
+    <div class="container">
+      {{>navigation}}
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="well text-center" id="dashboard-pane">
+            <h2 class="title-block">Lesson 1</h2>
+            <div class="about-container">
+              <h2 class="name"> Setting Up Your Workspace<h2>
+              
+            </div>
+          </div>
+        </div>
+        <!-- /.col-lg-12 -->
+      </div>
+      {{!--<div class="about-container">
+        <h2 class="name"> Name: {{firstName}}  {{lastName}}<h2>
+        <h2 class="name"> Percentage complete: 0%<h2>
+        
+      </div> --}}
+      <div class="row">
+        
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+          
+          <div id="lesson-content">
+
+
+
+     <vue-markdown>
+<!--________________________________________________BEGIN lesson content-->
+
+# ZORG
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque commodo tellus. Donec elit diam, accumsan non mi et, pellentesque pretium leo. Morbi pretium odio ut urna blandit, vel congue tellus vehicula. Aenean pharetra mi justo, et sagittis eros luctus vitae. Pellentesque adipiscing vestibulum sapien. Ut quis mauris ac diam facilisis elementum. Nam mattis nisl a metus placerat rutrum.
+In sed lacinia lacus, et dictum sem. Morbi semper venenatis sapien, vel tincidunt justo. Aliquam eu nunc id massa  fermentum hendrerit. Suspendisse at justo rhoncus, varius turpis ut, sodales sem. Suspendisse suscipit, arcu vitae luctus aliquam, quam urna malesuada neque, ac mollis justo dolor eu sem. Vestibulum fringilla dui sit amet arcu luctus tincidunt. In blandit, arcu eu rhoncus mollis, ligula tellus volutpat urna, sit amet laoreet odio erat dapibus erat. Phasellus porta dui sed scelerisque suscipit. Duis sollicitudin congue nulla, ut eleifend ante consectetur in. Proin nisi nulla, posuere et augue et, dictum molestie lacus. Aenean accumsan libero imperdiet lacus facilisis gravida. Pellentesque aliquam eget neque in facilisis. Pellentesque non erat sit amet dolor scelerisque facilisis. Vivamus 
+aliquam tortor a laoreet lobortis.
+
+
+
+``` javascript
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
+```
+
+
+<!--________________________________________________END lesson content-->
+     </vue-markdown>
+          </div>
+        </div>
+        <div class="col-md-2"> </div>
+        
+        
+      </div>
+      <link rel="stylesheet" type="text/css" href="/../css/prism.css"">
+      
+      <script src="/../js/jquery.js"></script>
+<script src="/../js/prism.js"></script>
+      <script src="/../js/bootstrap.min.js"></script>
+      <script src="/../js/vue.min.js"></script>
+      <script src="/../js/vue-markdown.js"></script>
+      <script>
+      $(function(){
+
+        Vue.use(VueMarkdown);
+            var vm = new Vue({
+            el: "#lesson-content"
+        });
+
+      })
+     
+      </script>
+    </body>
+    
+  </html>
