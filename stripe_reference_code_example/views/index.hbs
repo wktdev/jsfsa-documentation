@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+
+	</head>
+	<!--______________________________________________________BEGIN APP-->
+	<body>
+
+	<h1>App</h1>
+	{{data}}
+
+	<form action="payment" method="POST">
+ 
+              
+              <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="pk_test_PIUGAyJIJNznM3yvsag0iPzT"
+              data-amount="14900"
+              data-name="Demo Site"
+              data-description="Subscription $149"
+              data-locale="auto">
+              </script>
+              
+            </form>
+
+	</body>
+	<!--______________________________________________________END APP-->
+</html>
