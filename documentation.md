@@ -1,8 +1,10 @@
 
 ## Database setup
 
+You can use the Postgres app on the mac to start the database.
+https://postgresapp.com/documentation/gui-tools.html
 
-You can use PG Admin to administer the database.
+After the database has been started you can use PG Admin to administer the database.
 Download and install is here:  https://www.pgadmin.org/
 
 
@@ -55,3 +57,26 @@ connection.sync({
 
 
 
+## Stripe
+
+To get started with Stripe, go to the website and create an account.
+After you log in, in the upper left of the dashboard click "New Account" and give it a name.
+
+Select the new account in the upper left by clicking on the name.
+
+In the bottom left, click "API".
+
+Make sure API keys setting is set to "test".
+The "publishable key" and "secret key" are both needed for the app.
+
+
+Checking expired subscriptions:
+https://stackoverflow.com/a/22467344
+
+
+Getting user stripe ID
+https://stackoverflow.com/questions/35474723/stripe-connect-cancel-subscription-with-node-js
+
+
+## todo
+compensate for bad input if user uses a different email for app and stripe submission.
