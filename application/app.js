@@ -6,7 +6,8 @@ const Sequelize = require("sequelize");
 const connection = new Sequelize("jsfsa", "postgres", "password", {
     host: 'localhost',
     port: '5432',
-    dialect: 'postgres'
+    dialect: 'postgres',
+    logging: false
 });
 
 const bcrypt = require("bcryptjs");
@@ -485,7 +486,7 @@ app.get("/payment", (req, res) => {
 
 
 app.post("/payment", function(req, res) {
-
+    console.log(req.body.stripeToken)
     if (req.session.user.email) {
         var user = User.findOne({
             where: {
