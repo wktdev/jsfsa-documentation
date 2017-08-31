@@ -130,12 +130,53 @@ const User = connection.define("user", {
         type: Sequelize.BOOLEAN,
         defaultValue: false
 
+    },
+    isAdmin: {
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+
     }
+
 
 });
 
 connection.sync();
+
+
+
 //_________________________________________END Models__________________________________________
+//:::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::  BEGIN Create Admin(s)
+//_____________________________________________________________________________________________
+
+
+
+
+
+
+
+function makeAdmin(firstName, lastName, email, password) {
+    let hash = bcrypt.hashSync(password, salt);
+    let user = User.build({
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: hash,
+        subscribed: true,
+        isMentor: true,
+        isAdmin: true
+
+    });
+
+    user.save();
+}
+
+makeAdmin("Bob", "James", "xxx@gmail.com", "password"); // CHANGE DATA !!!!!!!!!!!!!
+
+
+
+
+//_________________________________________END Create Admin(s)_________________________________
 //:::::::::::::::::::::::::::::::::::::::
 //:::::::::::::::::::::::::::::::::::::::  BEGIN middleware
 //_____________________________________________________________________________________________
@@ -332,7 +373,7 @@ app.post("/login", (req, res) => {
                 res.redirect("/dashboard")
             } else {
 
-                res.render("login", {
+                res.render("page/login", {
                     csrfToken: req.csrfToken(),
                     flashError: "The email or password is invalid"
                 })
@@ -340,7 +381,7 @@ app.post("/login", (req, res) => {
 
             }
         } else {
-            res.render("login", {
+            res.render("page/login", {
                 csrfToken: req.csrfToken(),
                 flashError: "The email or password is invalid"
             })
@@ -433,16 +474,51 @@ app.get("/dashboard/jsfsa/:id", function(req, res) {
         res.redirect("/login")
     }
 
-})
+});
 
 
 //_________________________________________END Dashboard Checkpoint Lessons____________________
 //:::::::::::::::::::::::::::::::::::::::
-//:::::::::::::::::::::::::::::::::::::::  BEGIN Payment
+//:::::::::::::::::::::::::::::::::::::::  BEGIN Administrators Dashboard
 //_____________________________________________________________________________________________
 
 
 
+app.get("/admin", (req, res) => {
+    console.log(req.session.user)
+
+    if (req.session.user) {
+
+        User.findOne({
+            where: {
+                email: req.session.user.email
+            },
+        }).then((user) => {
+
+            console.log(user.admin);
+            console.log(user.admin)
+            if (user.isAdmin === true) {
+                res.render("page/admin")
+            } else {
+                res.redirect("/")
+            }
+
+        });
+    } else {
+        res.redirect("/")
+    }
+
+
+});
+
+
+
+
+
+//_________________________________________END Administrators Dashboard________________________
+//:::::::::::::::::::::::::::::::::::::::
+//:::::::::::::::::::::::::::::::::::::::  BEGIN Payment
+//_____________________________________________________________________________________________
 
 
 
