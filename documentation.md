@@ -74,9 +74,25 @@ Checking expired subscriptions:
 https://stackoverflow.com/a/22467344
 
 
-Getting user stripe ID
-https://stackoverflow.com/questions/35474723/stripe-connect-cancel-subscription-with-node-js
+
+## Query stripe user
+To query a user in the stripe database you use the "create" method. 
+This method does not modify the data in stripe, it simply queries it.
 
 
-## todo
-compensate for bad input if user uses a different email for app and stripe submission.
+```
+
+stripe.customers.create({
+  description: 'Customer for whatever@gmail.com'
+}, function(err, customer) {
+  console.log(customer);
+  console.log(customer.id);
+   // get object ID and store it app database in user collection
+   // also store the stripe email in a seperate user field in app database
+});
+
+
+```
+
+When a user submits payment, the object that comes back will have their email - immediately query it and get their ID! Store the id in a field in the apps
+database. Use the ID to get data about their account.
