@@ -114,18 +114,19 @@ const User = connection.define("user", {
     password: {
         type: Sequelize.STRING
     },
-    subscribed: {
+
+    isStudent: {
         type: Sequelize.BOOLEAN,
         defaultValue: false
     },
-    resetLinkExpires: {
-        type: Sequelize.BIGINT
-    },
-    resetLinkEndPoint: {
-        type: Sequelize.STRING,
+
+    subscribed: {
+        type: Sequelize.BOOLEAN,
         defaultValue: false
 
     },
+
+
     isMentor: {
         type: Sequelize.BOOLEAN,
         defaultValue: false
@@ -135,7 +136,16 @@ const User = connection.define("user", {
         type: Sequelize.BOOLEAN,
         defaultValue: false
 
-    }
+    },
+
+    resetLinkExpires: {
+        type: Sequelize.BIGINT
+    },
+    resetLinkEndPoint: {
+        type: Sequelize.STRING,
+        defaultValue: false
+
+    },
 
 
 });
@@ -152,26 +162,24 @@ connection.sync();
 
 
 
+// function makeAdmin(firstName, lastName, email, password) {
+//     let hash = bcrypt.hashSync(password, salt);
+//     let user = User.build({
+//         firstName: firstName,
+//         lastName: lastName,
+//         email: email,
+//         password: hash,
+//         isStudent: false,
+//         subscribed: true,
+//         isMentor: true,
+//         isAdmin: true
 
+//     });
 
+//     user.save();
+// }
 
-function makeAdmin(firstName, lastName, email, password) {
-    let hash = bcrypt.hashSync(password, salt);
-    let user = User.build({
-        firstName: firstName,
-        lastName: lastName,
-        email: email,
-        password: hash,
-        subscribed: true,
-        isMentor: true,
-        isAdmin: true
-
-    });
-
-    user.save();
-}
-
-makeAdmin("Bob", "James", "xxx@gmail.com", "password"); // CHANGE DATA !!!!!!!!!!!!!
+// makeAdmin("Bob", "James", "xxx@gmail.com", "password"); // CHANGE DATA !!!!!!!!!!!!!
 
 
 
@@ -482,10 +490,8 @@ app.get("/dashboard/jsfsa/:id", function(req, res) {
 //:::::::::::::::::::::::::::::::::::::::  BEGIN Administrators Dashboard
 //_____________________________________________________________________________________________
 
-
-
 app.get("/admin", (req, res) => {
-    console.log(req.session.user)
+
 
     if (req.session.user) {
 
@@ -495,10 +501,24 @@ app.get("/admin", (req, res) => {
             },
         }).then((user) => {
 
-            console.log(user.admin);
-            console.log(user.admin)
             if (user.isAdmin === true) {
-                res.render("page/admin")
+
+                User.findAll({
+                    where: {
+                        isMentor: true
+                    }
+                }).then((mentorList) => {
+
+
+                    res.render("page/admin", {
+                        mentors: mentorList
+
+                    })
+
+
+                });
+
+
             } else {
                 res.redirect("/")
             }
@@ -613,7 +633,7 @@ app.post("/resetPassword", (req, res) => {
 
                 res.render("page/email_sent", {
                     message: "An email has been sent to you with further instructions"
-                })
+                });
 
 
 

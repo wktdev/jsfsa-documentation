@@ -262,3 +262,11 @@ border-radius:5px;
   color:rgba(0, 0, 0, 0.78);
 }
 
+.user-names li{
+  list-style-type: none;
+}
+
+.user-names p{
+  font-size:15px;
+  color:rgba(253, 248, 238, 0.79);
+}
