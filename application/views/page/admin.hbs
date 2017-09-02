@@ -9,7 +9,7 @@
           <div class="well text-center" id="dashboard-pane">
             <h2 class="title-block">ADMIN PANEL</h2>
             <div class="about-container">
-        
+              
               
             </div>
           </div>
@@ -20,77 +20,77 @@
         <h2 class="name"> Name: {{firstName}}  {{lastName}}<h2>
         
       </div> --}}
-       <div class="row">
-        
-        <div class="col-md-6">
-         
+      <div id="vue-app">
+        <div class="row">
+          
+          <div class="col-md-6">
+            
             <section class="dashboard-lesson">
               <h3>Search Mentors</h3>
-
-
               
-                <form>
-                  <input type="" name="">
-                  <input type="submit" name="">
-                </form>
+              <form>
+                <input type="text" v-model="searchString" placeholder="" />
+              
+              </form>
+           
             </section>
-          
-        </div>
-        <div class="col-md-6">
-     
+            
+          </div>
+          <div class="col-md-6">
+            
             <section class="dashboard-lesson">
               <h3>Search Students</h3>
-
-                 <form>
-                  <input type="" name="">
-                  <input type="submit" name="">
-                </form>
-                
+             
             </section>
+            
+          </div>
+          
           
         </div>
-     
-        
-      </div>         
-
-      <div class="row">
-        
-        <div class="col-md-6">
-         
+        <div class="row">
+          
+          <div class="col-md-6">
+            
             <section class="dashboard-lesson">
               <h3>Mentors</h3>
               <ul class="user-names">
-                    {{#each mentors}}
-                              <hr>
+                <!--           {{#each mentors}}
+                <hr>
                 <li><p>{{this.firstName}} {{this.lastName}}</p></li>
                 <li>   <p>{{this.email}}</p></li>
                 <br>
-      
-                {{/each}}
+                
+                {{/each}} -->
+                
+                <li v-for="user in filterUsers">
+                  <p>
+                    <span>\{{user.firstName}}</span> |
+                    <span>\{{user.email}}</span>
+                  </p>
+                </li>
               </ul>
-             
+              
             </section>
-          
-        </div>
-        <div class="col-md-6">
-
-                <section class="dashboard-lesson">
-              <h3>Students</h3              
+            
+          </div>
+          <div class="col-md-6">
+            <section class="dashboard-lesson">
+              <h3>Students</h3
               <br>
               <div>Charles Bronson</div>
-                <div>Charles Bronson</div>
-                  <div>Charles Bronson</div>
+              <div>Charles Bronson</div>
+              <div>Charles Bronson</div>
             </section>
-       
+            
+          </div>
+          
         </div>
-     
-        
-      </div>          
-</div>
-
-<script src="js/jquery.js"></script>
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-</body>
-
+      </div>
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script src="js/vue-axios.min.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
 </html>
